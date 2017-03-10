@@ -16,10 +16,6 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
-
 app.get('/webcrawler', function(req, res){
   res.send('Hello Webcrawler!');
   /*
@@ -34,13 +30,15 @@ app.get('/webcrawler', function(req, res){
   );
   var output = "";
   python.stdout.on('data', function(data){ output += data });
-  python.on('close', function(code){ 
-    if (code !== 0) {  
-        return res.send(500, code); 
+  python.on('close', function(code){
+    if (code !== 0) {
+        return res.send(500, code);
     }
     return res.send(200, output);
   });
   */
 });
 
-
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
