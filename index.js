@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/webcrawler/:source/:method/:nodeCount/:depth/:keyword', function(req, res){
+app.get('/webcrawler', function(req, res){
   res.send(req.params);
   /*
   var python = require('child_process').spawn(
