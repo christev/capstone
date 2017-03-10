@@ -14,16 +14,16 @@ app.get('/', function(request, response) {
 });
 
 app.get('/webcrawler', function(req, res){
-  res.send(req.query);
-  /*
+  //res.send(req.query);
+  
   var python = require('child_process').spawn(
   'python',
   ["WebCrawler/Webcrawler.py"
-  , req.source
-  , req.method
-  , req.nodeCount
-  , req.depth
-  , req.keyword]
+  , req.query.source
+  , req.query.method
+  , req.query.nodeCount
+  , req.query.depth
+  , req.query.keyword]
   );
   var output = "";
   python.stdout.on('data', function(data){ output += data });
@@ -33,7 +33,7 @@ app.get('/webcrawler', function(req, res){
     }
     return res.send(200, output);
   });
-  */
+ 
 });
 
 app.listen(app.get('port'), function() {
