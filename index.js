@@ -21,7 +21,7 @@ app.listen(app.get('port'), function() {
 });
 
 app.get('/webcrawler', function(req, res){
-  console.log("Webcrawler");
+  res.send('Hello Webcrawler!');
   /*
   var python = require('child_process').spawn(
   'python',
