@@ -20,7 +20,7 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.post('/webcrawler', function(req, res){
+app.get('/webcrawler', function(req, res){
   console.log("Webcrawler");
   /*
   var python = require('child_process').spawn(
