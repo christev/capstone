@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/webcrawler', function(req, res){
-  res.send(req.params);
+  res.send(req.query);
   /*
   var python = require('child_process').spawn(
   'python',
