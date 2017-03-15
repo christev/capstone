@@ -29,7 +29,7 @@ app.get('/webcrawler', function(req, res){
   python.stdout.on('data', function(data){ output += data });
   python.on('close', function(code){
     if (code !== 0) {
-        return res.send(500, code);
+        return res.send(500, output);
     }
     console.log(code);
     console.log(output);
