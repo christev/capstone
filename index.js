@@ -14,8 +14,8 @@ app.get('/', function(request, response) {
 });
 
 app.get('/webcrawler', function(req, res){
-  res.send(req.query);
-  /*
+  //res.send(req.query);
+  
   var python = require('child_process').spawn(
   'python',
   ["WebCrawler/Webcrawler.py"
@@ -33,7 +33,7 @@ app.get('/webcrawler', function(req, res){
     }
     return res.send(200, output);
   });
-  */
+  
 });
 
 app.listen(app.get('port'), function() {
