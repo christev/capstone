@@ -18,7 +18,7 @@ app.get('/webcrawler', function(req, res){
   
   var python = require('child_process').spawn(
   'python',
-  ["WebCrawler/Webcrawler.py"
+  ["/WebCrawler/Webcrawler.py"
   , req.query.source
   , req.query.method
   , req.query.nodeCount
@@ -29,7 +29,7 @@ app.get('/webcrawler', function(req, res){
   python.stdout.on('data', function(data){ output += data });
   python.on('close', function(code){
     if (code !== 0) {
-        return res.send(500, output);
+        return res.send(500, code);
     }
     console.log(code);
     console.log(output);
