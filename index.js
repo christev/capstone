@@ -31,6 +31,9 @@ app.get('/webcrawler', function(req, res){
     if (code !== 0) {
         return res.send(500, code);
     }
+    console.log(code);
+    console.log(output);
+    console.log(data);
     return res.send(200, output);
   });
   
