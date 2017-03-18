@@ -1,0 +1,123 @@
+body {
+    background: #ccc;
+}
+
+h1 {
+    color: #f80;
+}
+
+input[type=number]{
+    width: 80px;
+}
+
+#bodyContainer {
+    background: #fff;
+    width: 960px;
+    padding: 30px;
+    border: 3px solid #666;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 7px 7px 7px #999;
+}
+
+p {
+    float: left;
+}
+
+#textContainer{
+    font-family: 'Trebuchet MS';
+    color: #666;
+    overflow: auto;
+}
+
+#formContainer
+{
+    float: right;
+    overflow: hidden;
+    margin-top: 80px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    font-family: verdana;
+    color: #666;
+    background: #f8f8f8;
+    border: 2px solid #999;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px #999;
+}
+
+#graphContainer{
+    clear: both;
+}
+
+.formRow {
+    display: table;
+    width: 100%;
+}
+.formRowPadding {
+}
+
+.formHeader {
+    margin: auto;
+    font-size: 1em;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.rightCol
+{
+    float: right;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.leftCol
+{
+    float: left;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.halfWidth{
+    padding-bottom: 10px;
+}
+
+.textInput {
+    border-radius: 10px;
+    padding: 5px;
+    font-family: verdana;
+    border:1px solid #999999;
+}
+
+#historyLinkContainer {
+    font-size: 0.7em;
+    color: #60c000;
+}
+
+#historyLinkContainer a:link, a:visited {
+    color: #60c000;
+    text-decoration: none;
+}
+
+#historyLinkContainer a:hover, a:active {
+    color: #60c000;
+    text-decoration: none;
+}
+
+#submitDiv {
+    padding: 10px;
+    background: #60c000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+svg {
+    border: 2px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 7px 7px 7px #999;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="style.css">
+    <title>Web Crawler</title>
+</head>
+<body>
+<div id="bodyContainer">
+    <div id="formContainer">
+        <form id="crawlRequestForm">
+        <div class="formRow formHeader">Enter a URL to start crawling from</div>
+        <div class="formRow formHeader">
+            <input id="urlInput" class="textInput" type="text" size="30" name="startUrl" placeholder="http://www.yahoo.com">
+        </div>
+        <div class="formRow">
+            <div class="leftCol halfWidth">
+                <label>
+                    <input type="radio" id="radioDFS" name="method" value="DFS">Depth first
+                </label>
+            </div>
+            <div class="rightCol halfWidth">
+                <label>
+                    <input type="radio" id="radioBFS" name="method" value="BFS" checked="true">Breadth first
+                </label>
+            </div>
+        </div>
+        <div class="formRow">
+            <div class="leftCol">
+                <label for="nodesInput">Maximum nodes:</label>
+            </div>
+            <div class="rightCol">
+                <input id="nodesInput" class="textInput" type="number" min="1" max="1000" width="5" step="1" name="nodes" placeholder="500">
+            </div>
+        </div>
+        <div class="formRow">
+            <div class="leftCol">
+                <label for="nodesInput">Maximum Depth:</label>
+            </div>
+            <div class="rightCol">
+                <input id="depthInput" class="textInput" type="number" min="1" max="1000" step="1" name="depth" placeholder="4">
+            </div>
+        </div>
+        <div class="formRow">
+            <div class="leftCol">
+                <label for="keywordInput">Keyword:</label>
+            </div>
+            <div class="rightCol">
+                <input id="keywordInput" class="textInput" type="text" size="15" name="keyword" placeholder="foobar">
+            </div>
+        </div>
+        <div class="formRow">
+            <div class="leftCol halfWidth" id="historyLinkContainer">
+                <a href="#" id="historyLink">see previous crawls</a>
+            </div>
+            <div class="rightCol halfWidth">
+                <div id="submitDiv">Start Crawling</div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div id="textContainer">
+        <h1>Web Crawler</h1>
+        <p>This app with crawl the web, starting from a web page of your choice. The crawler will follow every "valid" link on every web page it visits, until reaching the specified traversal depth or the maximum number of nodes. If you enter a keyword, the crawler will keep track of which pages contain that keyword. After the crawler is finished, it will display the results as a graph. The starting page ("node") and the web pages that contain the specified keyword will be highlighted differently from the others.
+        <p>Note that at this time the web crawler is in an early stage of development. While functional, it is not yet optimized to crawl large numbers of web pages quickly. It is therefore recommended that you start with a small number of nodes, perhaps around 10, to avoid long delays and potential timeout issues. Furthermore, Google Chrome version 56 is the only browser that has been tested against. It is known that there are small yet annoying compatibility issues with Microsoft Edge and Mozilla Firefox.
+    </div>
+    <div id="graphContainer"></div>
+</div>
+<script src='d3.v3.js'></script>
+<script src='GraphVis.js'></script>
+<script src='script.js'></script>
+</body>
+</html>
